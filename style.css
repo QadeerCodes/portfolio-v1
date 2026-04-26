@@ -1,5 +1,5 @@
 body {
-    background: white;
+    background: #f3f3f3;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -30,7 +30,7 @@ header {
     height: auto;
     margin: 5px;
     padding: 10px;
-    background-color: #f3f3f3;
+    background-color: white;
 }
 
 div {
@@ -41,7 +41,7 @@ div {
     min-height: 300px;
     margin: 10px;
     padding: 20px;
-    background-color: #f3f3f3;
+    background-color: white;
 }
 
 .profile {
@@ -71,7 +71,7 @@ footer {
     height: auto;
     margin: 5px;
     padding: 10px;
-    background-color: #f3f3f3;
+    background-color: white;
 }
 
 a {
