@@ -1,7 +1,22 @@
 body {
-    background: #f3f3f3;
+    background: #f9f9f9;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1,
@@ -28,7 +43,7 @@ header {
     border: 3px solid #f3f3f3;
     border-radius: 8px;
     height: auto;
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
     background-color: white;
 }
@@ -39,7 +54,7 @@ div {
     border-radius: 8px;
     line-height: 1.6;
     min-height: 300px;
-    margin: 10px;
+    margin: 20px;
     padding: 20px;
     background-color: white;
 }
@@ -51,9 +66,95 @@ div {
     border-radius: 50%;
 }
 
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h1,
+.text-content h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.text-content p {
+    text-align: left;
+    margin: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills-section {
+    min-height: auto;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #495057;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: #e9ecef;
+    border-color: #C7B50F;
+    color: #C7B50F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 button {
     height: 40px;
     width: 70px;
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    display: block;
+    margin: 0 auto;
+}
+
+.hire-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4285f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hire-btn:hover {
+    background-color: #3367d6;
+    transform: translateY(-2px);
 }
 
 nav {
@@ -69,7 +170,7 @@ footer {
     border: 3px solid #f3f3f3;
     border-radius: 8px;
     height: auto;
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
     background-color: white;
 }
@@ -82,7 +183,111 @@ a {
     transition: background-color 0.3s;
 }
 
+span {
+    background-color: #f3f3f3;
+}
+
 a:hover {
     color: purple;
     background-color: rgba(128, 0, 128, 0.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header,
+    footer,
+    div {
+        margin: 8px;
+        padding: 16px;
+        min-height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .text-content h1,
+    .text-content h3,
+    .text-content p {
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .skill-item {
+        height: 50px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .profile {
+        width: 200px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .hire-btn {
+        width: 100%;
+        max-width: 240px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    textarea,
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        padding: 0 10px;
+    }
+
+    div {
+        padding: 14px;
+    }
+
+    .home-content {
+        gap: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .skill-item {
+        height: 50px;
+        padding: 0 8px;
+        font-size: 13px;
+    }
+
+    .profile {
+        width: 160px;
+    }
 }
