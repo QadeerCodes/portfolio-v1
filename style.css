@@ -61,7 +61,7 @@ nav a:hover {
     color: purple;
 }
 
-/* TYPING EFFECT */
+/* TYPING EFFECT 
 .typing {
     overflow: hidden;
     border-right: 2px solid;
@@ -72,7 +72,7 @@ nav a:hover {
 
 @keyframes typing {
     to { width: 100%; }
-}
+} */
 
 /* SKILLS */
 .skills-grid {
@@ -81,7 +81,7 @@ nav a:hover {
     gap: 10px;
 }
 
-/* 🔽 SMALLER HEIGHT (your request) */
+/*  SMALLER HEIGHT */
 .skill-item {
     height: 40px; /* reduced */
     display: flex;
