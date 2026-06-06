@@ -1,15 +1,12 @@
-/* GLOBAL */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to right, #f9f9f9, #eef2f7);
     animation: fadeIn 1s ease-out forwards;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 .section {
     background: white;
     margin: 20px;
@@ -17,8 +14,6 @@ html {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-
-/* HEADER */
 header {
     margin: 20px;
     padding: 10px;
@@ -45,7 +40,6 @@ nav a:hover {
     color: white;
 }
 
-/* HOME */
 .home-content {
     display: flex;
     align-items: center;
@@ -61,29 +55,14 @@ nav a:hover {
     color: purple;
 }
 
-/* TYPING EFFECT 
-.typing {
-    overflow: hidden;
-    border-right: 2px solid;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 2s steps(20, end) forwards;
-}
-
-@keyframes typing {
-    to { width: 100%; }
-} */
-
-/* SKILLS */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
 }
 
-/*  SMALLER HEIGHT */
 .skill-item {
-    height: 40px; /* reduced */
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,25 +78,16 @@ nav a:hover {
     color: purple;
     transform: translateY(-2px);
 }
-
-/* PROJECTS */
 .projects-grid {
     display: grid;
     gap: 15px;
 }
-
 .project-card {
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
     transition: 0.3s;
 }
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-/* CONTACT */
 .contact-form {
     text-align: center;
 }
@@ -134,8 +104,6 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
-
-/* BUTTON */
 .hire-btn {
     display: inline-block;
     margin-top: 15px;
@@ -149,8 +117,6 @@ button {
 .hire-btn:hover {
     background: #3367d6;
 }
-
-/* FOOTER */
 footer {
     margin: 20px;
     padding: 10px;
@@ -159,17 +125,6 @@ footer {
     border-radius: 10px;
 }
 
-.footer-text {
-    display: block;
-    animation: scrollText 10s linear infinite;
-}
-
-@keyframes scrollText {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
-}
-
-/* ANIMATION */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -181,7 +136,6 @@ footer {
     }
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .home-content {
         flex-direction: column;
